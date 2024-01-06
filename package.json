@@ -5,14 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "deploy": "vercel --prod"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.1",
     "vite": "^4.5.0"
   },
   "dependencies": {
+    "@react-three/drei": "9.88",
+    "@react-three/fiber": "8.15",
+    "@react-three/postprocessing": "^2.15.11",
+    "antd": "^5.12.7",
     "react": "18.2",
-    "react-dom": "18.2"
+    "react-dom": "18.2",
+    "react-icons": "^4.12.0",
+    "three": "^0.158.0",
+    "vercel": "^33.0.2"
   }
 }
