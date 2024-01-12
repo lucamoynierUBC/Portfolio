@@ -8,6 +8,7 @@ body,
     width: 100%;
     height: 100%;
     overflow: hidden;
+    touch-action: auto;
 }
 
 
@@ -176,18 +177,32 @@ body,
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
   }
-  .crt {
 
-    border-radius: 12px;
+  .crt {
+    border-radius: 1px;
     animation: textShadow 1.6s infinite;
-    height: 298px;
-    width: 395px;
+    /* height: 415px; */
+    /* width: 525px; */
+    width: 55vh;
+    height: 44vh;
+    border-radius: 5px solid 'red';
+    position: fixed;
+    touch-action: auto;
+    z-index: 100;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .crt {
+      height: 290px;
+      width: 370px;
+      overflow: scroll;
+    }
   }
   
 .text
 {
     color: #8ae234;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'DejaVu Sans Mono', monospace;
     cursor: pointer;
     width: fit-content;
@@ -210,16 +225,55 @@ body,
 
 .smallText
 {
-  color: magenta;
+  color: #729fcf;
   font-family: 'DejaVu Sans Mono', monospace;
-  font-size: 10px;
+  font-size: 14px;
+  padding-left: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .smallText {
+      font-size: 8px;
+  }
 }
 
 .header
 {
   color: #729fcf;
   font-family: monospace;
-  font-size: 10px;
+  font-size: 18px;
   white-space: pre;
+  
+}
 
+.position
+{
+  color: #729fcf;
+  font-size: 16px;
+}
+@media only screen and (max-width: 600px) {
+  .position {
+      font-size: 10px;
+  }
+}
+.date
+{
+  font-size: 12px;
+}
+@media only screen and (max-width: 600px) {
+  .date {
+      font-size: 8px;
+  }
+}
+
+.company
+{
+  font-size: 16px;
+  
+  color: #729fcf;
+}
+@media only screen and (max-width: 600px) {
+  .company {
+      font-size: 8px;
+  }
 }

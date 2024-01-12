@@ -26,7 +26,6 @@ export default function Experience() {
        <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#0c8cbf"} position={[-1.87, .95, 7]}></SpotLight>
        <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#0c8cbf"} position={[1.95, .95, 7]}></SpotLight>
        {/* <OrbitControls></OrbitControls> */}
-       
   
 
        
