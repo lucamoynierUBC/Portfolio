@@ -186,14 +186,15 @@ body,
     width: 55vh;
     height: 44vh;
     border-radius: 5px solid 'red';
-    position: fixed;
+    position: absolute;
     touch-action: auto;
     z-index: 100;
+    overflow: scroll;
   }
 
   @media only screen and (max-width: 600px) {
     .crt {
-      height: 290px;
+      height: 39vh;
       width: 370px;
       overflow: scroll;
     }
@@ -229,6 +230,7 @@ body,
   font-family: 'DejaVu Sans Mono', monospace;
   font-size: 14px;
   padding-left: 25px;
+  margin-right: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -276,4 +278,24 @@ body,
   .company {
       font-size: 8px;
   }
+}
+
+.card
+{
+  border: #4e9a06 2px solid;
+  padding: 10px;
+  margin-top: 7px;
+}
+
+.card-title
+{
+  font-size: 20px;
+}
+.card-date
+{
+  font-size: 12px;
+}
+.card-content
+{
+  padding: 20px;
 }

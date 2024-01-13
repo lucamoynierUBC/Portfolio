@@ -1,5 +1,5 @@
 import { Html } from "@react-three/drei";
-import { Button, Divider, Flex } from "antd";
+import { Button, Card, ConfigProvider, Divider, Flex, Space } from "antd";
 import { useState, useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { PiExamFill, PiLinkedinLogo, PiLinkedinLogoDuotone } from "react-icons/pi";
@@ -22,6 +22,10 @@ export default function Screen() {
             case 'about':
                 console.log("about")
 
+                break
+            
+            case 'projects':
+                console.log("projects")
                 break
             
             case 'resume':
@@ -94,9 +98,11 @@ export default function Screen() {
                         case 'experience':
                             return event.key === "ArrowUp" ? 'contact' : 'about';
                         case 'about':
-                            return event.key === "ArrowUp" ? 'experience' : 'resume';
+                            return event.key === "ArrowUp" ? 'experience' : 'projects';
+                        case 'projects':
+                            return event.key === "ArrowUp" ? 'about' : 'resume';
                         case 'resume':
-                            return event.key === "ArrowUp" ? 'about' : 'contact';
+                            return event.key === "ArrowUp" ? 'projects' : 'contact';
                         case 'contact':
                             return event.key === "ArrowUp" ? 'resume' : 'experience';
                         default:
@@ -179,6 +185,99 @@ export default function Screen() {
                 {selection === 'about' && (
                     <div className="smallText">
                         {aboutText}
+                    </div>
+                )}
+                <p onPointerDown={() => setSelection('projects')} className={`text ${selection === 'projects' ? 'highlighted' : ''}`}>
+                    Projects
+                </p>
+                {selection === 'projects' && (
+                    <div className="smallText">
+                        <Flex gap={"small"}>
+                            <div className="card">
+                                <div className="card-title">
+                                    NBA Data visualization
+                                </div>
+                                <div className="card-date">
+                                    Spring 2023
+                                </div>
+                                <div className="card-content">
+                                    In an exploration of data visualization I created a dashboard to visualize trends in the NBA. 
+                                    I created multi-view representations exploring different marks and channels to encode NBA data. 
+                                    Several of the visualizations I created are interactive, a subset of which have a bi-directional interaction. 
+                                    Additionally I carried out extenstive preporcessing and data merging using the Pandas library. 
+                                </div>
+                            </div>
+                            <div className="card">
+                                <div className="card-title">
+                                    Labby
+                                </div>
+                                <div className="card-date">
+                                    Winter 2022 - Spring 2023
+                                </div>
+                                <div className="card-content">
+                                Built a robust and scalable laboratory management system with a small student team from scratch as a Software Engineer for BC Cancer Agency at UBC Launch Pad, using Node.js, React, MySQL, and AWS services. We used agile project management methodolgies. 
+                                </div>
+                            </div>
+                            
+                        </Flex>
+                        
+                        <Flex gap={"small"}>
+                            <div className="card">
+                                <div className="card-title">
+                                    BestBuy review analyzer
+                                </div>
+                                <div className="card-date">
+                                    Winter 2022
+                                </div>
+                                <div className="card-content">
+                                    In a small group with 2 other classmates we developed a Flask based web application to query and explore the Best Buy product catalog. I primarily was responsible for creating the database, writing queries, and implementing controllers and repositories.
+                                </div>
+                            </div>
+                        <div className="card">
+                                <div className="card-title">
+                                    Algorithmic Art
+                                </div>
+                                <div className="card-date">
+                                    Fall 2022
+                                </div>
+                                <div className="card-content">
+                                Represented images as 4-ary trees whose nodes contain information about square subsets of the image where every node is the root of a subtree that represents a subset of the original image.
+                                Pruned, or cut off, parts of the quadtree to generate pixelated algorithmic art. This was achieved by clearing the
+                                memory associated with each of its four children and leaving the node as a leaf.
+                                </div>
+                            </div>
+                        </Flex>
+                        <Flex gap={"small"}>
+                            <div className="card">
+                                <div className="card-title">
+                                    Autonomous Ardruino Bot
+                                </div>
+                                <div className="card-date">
+                                    Winter 2021
+                                </div>
+                                <div className="card-content">
+                                    Developed an autonomous Arduino-based car equipped with ultrasonic sensors to enable obstacle detection and avoidance, 
+                                    as well as light sensors to enable the car to follow predefined paths autonomously. Programmed the car using C++ to implement real-time decision-making algorithms, allowing it to navigate and solve a maze and follow predefined paths autonomously.
+                                </div>
+                            </div>
+                            <div className="card">
+                                <div className="card-title">
+                                    Sound Board
+                                </div>
+                                <div className="card-date">
+                                    Winter 2021
+                                </div>
+                                <div className="card-content">
+                                Developed a Soundboard where users can loop sounds, build and save playlists from an extensive list of sounds. 
+                                Utilized JSON for data persistence for tasks and implemented read/write operations to and from files. 
+                                Self learned Java Swing and AWT to build a GUI and wrote unit tests with 100% code coverage for the back end
+back end.
+                                </div>
+                            </div>
+
+                        </Flex>
+                       
+                        
                     </div>
                 )}
                 <p onPointerDown={() => setSelection('resume')} className={`text ${selection === 'resume' ? 'highlighted' : ''}`}>
