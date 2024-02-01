@@ -13,7 +13,7 @@ import Screen from "./Screen";
 export default function CRTv(props) {
   const { nodes, materials } = useGLTF("/crt_tv.glb");
   return (
-    <group scale={1} position={[0,-0.2,41.05]} {...props} dispose={null}>
+    <group scale={.999} position={[0,-0.2,41.05]} {...props} dispose={null}>
       <group
         position={[0, 0, -36.571]}
         rotation={[-Math.PI / 2, 0, -Math.PI]}
