@@ -3,6 +3,7 @@ import './style.css'
 import ReactDOM from 'react-dom/client'
 import Experience from './Experience'
 import { ConfigProvider } from 'antd'
+import { Analytics } from '@vercel/analytics/react';
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -21,6 +22,7 @@ root.render(
 
             
             <Experience/>
+            <Analytics />
     
         </Canvas>
         </ConfigProvider>
