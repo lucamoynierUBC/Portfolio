@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { PiExamFill, PiLinkedinLogo, PiLinkedinLogoDuotone } from "react-icons/pi";
 import { SiGmail } from "react-icons/si";
+import { Link } from "wouter";
 
 export default function Screen() {
 
@@ -71,6 +72,7 @@ export default function Screen() {
 
     const experienceKey = selection === 'experience' ? 'experience' : null;
     const linebr = useTypewriterEffect("--------------------------------------------------------------------------"  , 10, experienceKey);
+    const link = useTypewriterEffect("Learn more", 10, experienceKey)
     const experience1 = useTypewriterEffect("Software Engineer Intern"  , 10, experienceKey);
     const company1 = useTypewriterEffect(" NYC Department of City Planning"  , 10, experienceKey);
     const date1 = useTypewriterEffect("6/23 - 12/23"  , 10, experienceKey);
@@ -132,6 +134,7 @@ export default function Screen() {
                     <div className='smallText'> 
                         <div>
                             <Flex gap={"middle"}>
+                                
                                 <div className="position">
                                     {experience1}
                                 </div>
@@ -143,16 +146,23 @@ export default function Screen() {
                                 </div>
 
                             </Flex>
+                            
                             <div className="date">
                             {date1}
                             </div>
                             <ul>
                                 <li>
                                     {description1} <a style={{color: '#34e2e2'}} href="https://cif-ud-project.vercel.app/" target="_blank"> {link1} </a>
+                                
                                    
                                 </li>
                                 <li>
                                     {description3}
+                                </li>
+                                <li >
+                                    <Link  href="/projects">
+                                        <a style={{color: '#34e2e2'}}>{link}</a>
+                                    </Link>
                                 </li>
                             </ul>
                             <Flex gap={"middle"}>
@@ -285,7 +295,7 @@ export default function Screen() {
                 </p>
                 {selection === 'resume' && (
                     <div className="smallText">
-                        <a style={{color: '#34e2e2'}} href="https://drive.google.com/file/d/1hplgufG2VgoTtxMwHGFp23N0iKL6yO_l/view?usp=sharing" target="_blank">Download .PDF</a> (May be outdated)
+                        <a style={{color: '#34e2e2'}} href="https://drive.google.com/file/d/1WhNOfRNo63tRKmzXcdGdHvwnnrJj_CMu/view?usp=sharing" target="_blank">Download .PDF</a> (May be outdated)
 
                     </div>
                 )}

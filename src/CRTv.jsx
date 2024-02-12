@@ -9,6 +9,8 @@ Title: CRT TV
 import React, { useRef } from "react";
 import { Html, useGLTF } from "@react-three/drei";
 import Screen from "./Screen";
+import { Route } from "wouter";
+import Projects from "./Projects";
 
 export default function CRTv(props) {
   const { nodes, materials } = useGLTF("/crt_tv.glb");
@@ -50,7 +52,9 @@ export default function CRTv(props) {
               position={[0, 0, -166.617]}
               scale={398.216}
             >
-              <Screen></Screen>
+              {/* <Screen></Screen> */}
+              <Route path="/" component={Screen}></Route>
+              <Route path="/projects" component={Projects}></Route>
             </mesh>
             <mesh
               castShadow
