@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client'
 import Experience from './Experience'
 import { ConfigProvider } from 'antd'
 import { Analytics } from '@vercel/analytics/react';
+import { Suspense } from 'react'
+import { Loader } from '@react-three/drei'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -18,13 +20,15 @@ root.render(
                 }
             }}>
         <Canvas>
-            
+            <Suspense fallback={null}>
+                
 
-            
-            <Experience/>
-            <Analytics />
-    
+                
+                <Experience/>
+                <Analytics />
+        </Suspense>
         </Canvas>
+        <Loader/>
         </ConfigProvider>
     </>
 )
