@@ -322,7 +322,7 @@ body,
   color: #729fcf;
   font-family: 'DejaVu Sans Mono', monospace;
   font-size: 14px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .team
@@ -330,11 +330,26 @@ body,
   color: #729fcf;
   font-family: 'DejaVu Sans Mono', monospace;
   font-size: 12px;
+  margin-left: 10px;
 }
 
 .title 
 {
-  color: #729fcf;
+  color: #8ae234;
   font-family: 'DejaVu Sans Mono', monospace;
-  padding-left: 5px;
+  padding-left: 10px;
+}
+
+.goals
+{
+  color: #8ae234;
+  font-family: 'DejaVu Sans Mono', monospace;
+  padding-left: 10px;
+}
+
+.goals-list
+{
+  color: #8ae234;
+  font-family: 'DejaVu Sans Mono', monospace;
+  padding-left: 20px;
 }
