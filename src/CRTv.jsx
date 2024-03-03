@@ -11,6 +11,7 @@ import { Html, useGLTF } from "@react-three/drei";
 import Screen from "./Screen";
 import { Route } from "wouter";
 import Projects from "./Projects";
+import About from "./About";
 
 export default function CRTv(props) {
   const { nodes, materials } = useGLTF("/crt_tv.glb");
@@ -55,6 +56,7 @@ export default function CRTv(props) {
               {/* <Screen></Screen> */}
               <Route path="/" component={Screen}></Route>
               <Route path="/projects" component={Projects}></Route>
+              <Route path="/about" component={About}></Route>
             </mesh>
             <mesh
               castShadow

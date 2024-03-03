@@ -1,10 +1,13 @@
-import { Html } from "@react-three/drei";
-import { Button, Card, ConfigProvider, Divider, Flex, Space } from "antd";
-import { useState, useEffect, useRef } from "react";
+import { Html, OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Button, Card, ConfigProvider, Divider, Flex, Space, Spin } from "antd";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { PiExamFill, PiLinkedinLogo, PiLinkedinLogoDuotone } from "react-icons/pi";
 import { SiGmail } from "react-icons/si";
 import { Link } from "wouter";
+import Globe from "./Globe";
+import MiniGame from "./MiniGame";
 
 export default function Screen() {
 
@@ -128,6 +131,8 @@ export default function Screen() {
                 <p onClick={() => setSelection('experience')} className={`text ${selection === 'experience' ? 'highlighted' : ''}`}>
                     Experience
                 </p>
+                {/* <MiniGame></MiniGame> */}
+
 
 
                 {selection === 'experience' && (
@@ -190,14 +195,38 @@ export default function Screen() {
                         </div>
                     </div>
                 )}
-                <p onPointerDown={() => setSelection('about')} className={`text ${selection === 'about' ? 'highlighted' : ''}`}>
-                    About
-                </p>
-                {selection === 'about' && (
-                    <div className="smallText">
-                        {aboutText}
+                <Link href="/about">
+                    <p onClick={() => setSelection('about')} className={`text ${selection === 'about' ? 'highlighted' : ''}`}>
+                        About
+                    </p>
+                </Link>
+                {/* {selection === 'about' && (
+                   
+                    <div>
+                        <div className="smallText">
+                            {aboutText}
+
+                        
+                            <Flex style={{marginTop: "50px"}} justify="space-between">
+                            <h3>Countries Visted:</h3>
+                            <Canvas style={{border : "solid 2px green", width: "50%", height: "300px"}}>
+                                <OrbitControls enableZoom={false} enablePan={false}></OrbitControls>
+                                <ambientLight position={[0,25,0]} intensity={5}></ambientLight>
+                                
+                                <mesh>
+                                    <Globe></Globe>
+                                </mesh>
+                            
+
+                            </Canvas>
+                            </Flex>
+                        
+                            
+
+                        </div>
                     </div>
-                )}
+                   
+                )} */}
                 <p onPointerDown={() => setSelection('projects')} className={`text ${selection === 'projects' ? 'highlighted' : ''}`}>
                     Projects
                 </p>

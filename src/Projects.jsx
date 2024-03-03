@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Button, Flex } from "antd";
 import { BoxGeometry } from "three";
 import { Link } from "wouter";
+import Globe from "./Globe";
 
 
 export default function Projects() {
@@ -36,18 +37,25 @@ export default function Projects() {
                     </ol>
 
                     <h3 className="goals"> Development Tools</h3>
-                    <p className="projectText"> Dev: React, Three.js, Node.js JavaScript, Zustand(state mangement)</p>
+                    <p className="projectText"> Dev: React, Three.js, Node.js JavaScript, Zustand(state management)</p>
                     <p className="projectText"> Desgin: Figma, Blender, Rhinoceros 3D</p>
+                    
+                    <Flex align="center">
+                        <h3 className="goals">Demo:</h3>
+                        <a style={{color: '#34e2e2'}} href="https://cif-ud-project.vercel.app/" target="_blank">link</a>
+                    </Flex>
                 
-                <Canvas style={{border : "solid 2px green", width: "50%", height: "50%", left: "25%"}}>
-                    <OrbitControls enablePan={false} enableZoom={false}></OrbitControls>
-                    <ambientLight></ambientLight>
+                {/* <Canvas style={{border : "solid 2px green", width: "50%", height: "50%", left: "25%"}}>
+                    <OrbitControls enableZoom={false} enablePan={false}></OrbitControls>
+                    <ambientLight position={[0,25,0]} intensity={5}></ambientLight>
+                    
                     <mesh>
                         <boxGeometry></boxGeometry>
                         <meshStandardMaterial color={"red"}></meshStandardMaterial>
+                        <Globe></Globe>
                     </mesh>
 
-                </Canvas>
+                </Canvas> */}
                 
                     
                     

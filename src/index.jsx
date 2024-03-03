@@ -9,6 +9,7 @@ import { Loader } from '@react-three/drei'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
+
 root.render(
     <>
     <ConfigProvider theme={{

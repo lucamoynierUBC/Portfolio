@@ -353,3 +353,13 @@ body,
   font-family: 'DejaVu Sans Mono', monospace;
   padding-left: 20px;
 }
+
+.about-text
+{
+  color: #729fcf;
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+
