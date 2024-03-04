@@ -11,7 +11,7 @@ export default function About() {
     
     const GlobeWithDelay = lazy(() => {
         return new Promise(resolve => {
-            setTimeout(() => resolve(import('./Globe')), 4000); // Adjust delay as needed
+            setTimeout(() => resolve(import('./Globe')), 2500); // Adjust delay as needed
         });
     });
     
@@ -46,12 +46,13 @@ export default function About() {
                 <Flex vertical align="center" justify="center">
                     <h2 className="title">Countries Visited:</h2>
                   
-                    <Suspense fallback={<div style={{width: "100%", height: "600px", display: "flex", justifyContent: "center", }}><Spin size="large"></Spin></div>}>
+                    <Suspense fallback={<div style={{width: "100%", display: "flex", justifyContent: "center", }}><Spin size="large"></Spin></div>}>
                 
                         <Canvas style={{width: "100%", height: "400px", left: "3%"}}>
                             <OrbitControls enableZoom={false} enablePan={false}></OrbitControls>
                             <ambientLight position={[0,25,0]} intensity={5}></ambientLight>
                             <GlobeWithDelay></GlobeWithDelay>
+                           
                         </Canvas>
                         </Suspense>
                 </Flex>
