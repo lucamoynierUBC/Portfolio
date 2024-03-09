@@ -8,6 +8,7 @@ import { SiGmail } from "react-icons/si";
 import { Link } from "wouter";
 import Globe from "./Globe";
 import MiniGame from "./MiniGame";
+import NavBar from "./NavBar";
 
 export default function Screen() {
 
@@ -126,12 +127,13 @@ export default function Screen() {
     return (
         <Html zIndexRange={[100,0]} position={[-0.05,.039,0.415]} distanceFactor={0.8}>
             <div className="crt">
+                <NavBar></NavBar>
                 <div className="content">
-                <h1 className="header">Luca Moynier</h1>
+                {/* <h1 className="header">Luca Moynier</h1>
                 <p onClick={() => setSelection('experience')} className={`text ${selection === 'experience' ? 'highlighted' : ''}`}>
                     Experience
                 </p>
-                {/* <MiniGame></MiniGame> */}
+      
 
 
 
@@ -200,33 +202,7 @@ export default function Screen() {
                         About
                     </p>
                 </Link>
-                {/* {selection === 'about' && (
-                   
-                    <div>
-                        <div className="smallText">
-                            {aboutText}
-
-                        
-                            <Flex style={{marginTop: "50px"}} justify="space-between">
-                            <h3>Countries Visted:</h3>
-                            <Canvas style={{border : "solid 2px green", width: "50%", height: "300px"}}>
-                                <OrbitControls enableZoom={false} enablePan={false}></OrbitControls>
-                                <ambientLight position={[0,25,0]} intensity={5}></ambientLight>
-                                
-                                <mesh>
-                                    <Globe></Globe>
-                                </mesh>
-                            
-
-                            </Canvas>
-                            </Flex>
-                        
-                            
-
-                        </div>
-                    </div>
-                   
-                )} */}
+             
                 <p onPointerDown={() => setSelection('projects')} className={`text ${selection === 'projects' ? 'highlighted' : ''}`}>
                     Projects
                 </p>
@@ -339,8 +315,7 @@ export default function Screen() {
                             <a href="mailto:lucamoynier2@gmail.com" target="_blank"><SiGmail size={"30px"}></SiGmail></a>
                         </Flex>
                        
-                    </div>
-                )}
+                    </div> */}
                 </div>
             </div>
         </Html>

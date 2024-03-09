@@ -6,6 +6,7 @@ Source: https://sketchfab.com/3d-models/crt-tv-9ba4baa106e64319a0b540cf0af5aa9e
 Title: CRT TV
 */
 
+
 import React, { useRef } from "react";
 import { Html, useGLTF } from "@react-three/drei";
 import Screen from "./Screen";
@@ -15,8 +16,12 @@ import About from "./About";
 
 export default function CRTv(props) {
   const { nodes, materials } = useGLTF("/crt_tv.glb");
+  const isMobile = window.innerWidth <= 600
+
+
+
   return (
-    <group scale={.999} position={[0,-0.2,41.05]} {...props} dispose={null}>
+    <group scale={ isMobile? .999 : .995} position={[0,-0.2,41.05]} {...props} dispose={null}>
       <group
         position={[0, 0, -36.571]}
         rotation={[-Math.PI / 2, 0, -Math.PI]}

@@ -13,6 +13,7 @@ extend({ ThreeGlobe })
 export default function Globe(props) {
   // This reference will give us direct access to the ThreeGlobe class
   const globeRef = useRef()
+  const isMobile = window.innerWidth <= 600
 
   const countriesVisited = ["United States of America", "Canada", 
   "Bahamas", "France", "Australia", "Italy", "Germany", "Costa Rica", "Belize", "Dominican Republic", "Israel"  ]
@@ -32,8 +33,8 @@ export default function Globe(props) {
   // An effect that runs after three.js elements are created but before render
   useLayoutEffect(() => {
     // Configure the globe
-    // globeRef.current.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-    // globeRef.current.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+    globeRef.current.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+    globeRef.current.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
     const globeMaterial = globeRef.current.globeMaterial()
     globeMaterial.color = new THREE.Color(0x3a228a)
     globeMaterial.emissive = new THREE.Color(0x220038)
@@ -41,20 +42,20 @@ export default function Globe(props) {
     globeMaterial.shininess=0.7
     globeRef.current.position.y = 0
     globeRef.current.position.x = 0
-    globeRef.current.scale.set(0.023,0.023,0.023)
-    globeRef.current.hexPolygonsData(countries.features)
-    globeRef.current.hexPolygonColor((feature) => {
+    globeRef.current.scale.set(isMobile ? 0.018 :  0.023, isMobile ? 0.018 :  0.023, isMobile ? 0.018 :  0.023)
+    globeRef.current.polygonsData(countries.features)
+    globeRef.current.polygonCapColor((feature) => {
       // Check if the country is Brazil
       const countryName = feature.properties.name || feature.properties.admin;
       if (countriesVisited.includes(countryName)) {
-        return `#${Math.round(Math.random() * Math.pow(2, 24)).toString(16).padStart(6, '0')}`
+        return `red`
       } else {
         return 'black'; // All other countries
       }
     })
 
-    globeRef.current.hexPolygonResolution(4)
-    globeRef.current.hexPolygonMargin(0.3)
+    // globeRef.current.hexPolygonResolution(3)
+    // globeRef.current.hexPolygonMargin(0.3)
     
     // globeRef.current.labelsData(gData)
     // globeRef.current.labelText(d => `(${Math.round(d.lat * 1e2) / 1e2}, ${Math.round(d.lng * 1e2) / 1e2})`)
@@ -64,11 +65,17 @@ export default function Globe(props) {
     globeRef.current.labelsData(map.maps)
     globeRef.current.labelText("country")
     globeRef.current.labelSize(2)
+    globeRef.current.labelColor(() => '#8ae234')
     globeRef.current.labelDotRadius(0.5)
     globeRef.current.labelAltitude(0.01)
-
-
+    // globeRef.current.globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+    // // globeRef.current.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
     
+
+
+    globeRef.current.onAfterRender = function(){
+      console.log("hello")
+    }
 
 
     

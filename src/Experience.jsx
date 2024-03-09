@@ -16,14 +16,14 @@ export default function Experience() {
 
           </Lightformer>
        </Environment>
-       <SpotLight angle={0.5} attenuation={10} anglePower={1} color={"#0c8cbf"} position={[2,0,7]}></SpotLight>
-       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#0c8cbf"} position={[2, 0, 7]}></SpotLight>
-       <SpotLight angle={0.5} attenuation={10} anglePower={1} color={"#A020F0"} position={[0,3,7]}></SpotLight>
-       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[0.5, -1, 7]}></SpotLight>
-       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[.5, -1, 7]}></SpotLight>
-       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[-.5, -1, 7]}></SpotLight>
-       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[-2, .95, 7]}></SpotLight>
-       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#0c8cbf"} position={[2, .95, 7]}></SpotLight>
+       <SpotLight angle={0.5} attenuation={10} anglePower={1} color={"#0c8cbf"} position={[3,0,7]}></SpotLight>
+       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#0c8cbf"} position={[3, 0, 7]}></SpotLight>
+       <SpotLight angle={0.5} attenuation={10} anglePower={1} color={"#A020F0"} position={[3,3,7]}></SpotLight>
+       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[2.5, -1, 7]}></SpotLight>
+       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[2.5, -1, 7]}></SpotLight>
+       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[-2.5, -1, 7]}></SpotLight>
+       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#A020F0"} position={[-3, .95, 7]}></SpotLight>
+       <SpotLight angle={0.5} anglePower={1} attenuation={10} color={"#0c8cbf"} position={[3, .95, 7]}></SpotLight>
        {/* <OrbitControls></OrbitControls> */}
   
 

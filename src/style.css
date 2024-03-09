@@ -19,6 +19,17 @@ body,
     font-style: normal;
 }
 
+@font-face
+{
+  font-family: "Space Mono", monospace;
+  src: url('/public/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+
+
 
 @keyframes flicker {
     0% {
@@ -183,8 +194,8 @@ body,
   animation: textShadow 1.6s infinite;
   /* height: 415px; */
   /* width: 525px; */
-  width: 58vh;
-  height: 44vh;
+  width: 65vh;
+  /* height: 100vh; */
   border-radius: 5px solid 'red';
   position: absolute;
   touch-action: auto;
@@ -195,15 +206,30 @@ body,
 {
   overflow: scroll;
   overflow-x: hidden;
-  height: 44vh;
+  height: 48vh;
 }
   @media only screen and (max-width: 600px) {
     .crt {
       height: 39vh;
-      width: 370px;
+      width: 50vh;
       overflow: scroll;
     }
   }
+
+.content-about
+{
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 50vh;
+}
+  @media only screen and (max-width: 600px) {
+    .crt {
+      height: 39vh;
+      width: 52vh;
+      overflow: scroll;
+    }
+  }
+
   
 .text
 {
@@ -363,4 +389,104 @@ body,
   margin-left: 10px;
 }
 
+.stacked-text span {
+  display: block;
+  line-height: 1; /* Adjust this value as needed */
+  color: yellow;
+  font-size: 20px;
+}
 
+.interests
+{
+  margin: -20px;
+  color: yellow;
+  text-decoration: underline;
+}
+
+.NavBar
+{
+  border: 0px solid #8ae234;
+  width: 100%;
+  height: fit-content;
+}
+
+
+.NavBtn {
+  text-transform: uppercase;
+  height: 20px;
+ 
+ 
+} 
+ 
+.NavBtn:hover .NavBtn-slide-show-text1 {
+  /* margin-left: 65px; */
+} 
+ 
+.NavBtn-shadow-drop {
+  position: relative;
+  /* margin-top: 10%; */
+  background: rgb(249, 250, 250);
+
+  /* padding: 20px; */
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  /* text-decoration:  underline #8ae234 2px; */
+  
+} 
+ 
+.NavBtn-shadow-drop:hover {
+  left: 2px;
+  top: 2px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+  background: #8ae234;
+} 
+ 
+.NavBtn-shadow-drop--black {
+  border: 1px solid rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
+  box-shadow: rgb(51, 51, 51) 1px 1px 0px 0px;
+} 
+
+.globeCard {
+  color: white;
+  width: 180px;
+
+  background-color: rgba(51, 52, 59, 0.5);
+  border-radius: 4px;
+  padding-left: 2px;
+  font-family: 'Space Mono', monospace;
+  padding-left: 5px;
+  margin-left: 10px;
+  padding-bottom: 5px;
+
+
+}
+
+.globeCardTitle{
+  font-weight: 700;
+  font-size: x-large;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
+}
+
+.globeCardSubTitle{
+  font-weight: 900;
+  font-size: small;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  
+}
+.globeFacts{
+  font-weight: 100;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: x-small;
+}
+ 
