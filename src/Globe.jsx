@@ -70,19 +70,6 @@ export default function Globe(props) {
     globeRef.current.labelAltitude(0.01)
     // globeRef.current.globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
     // // globeRef.current.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-    
-
-
-    globeRef.current.onAfterRender = function(){
-      console.log("hello")
-    }
-
-
-    
-
-
-
-
 
   }, []);
 

@@ -32,7 +32,7 @@ export default function About() {
       };
 
 
-    const gifScale = isMobile ? "35vh" : "35vh"
+    const gifScale = isMobile ? "20vh" : "35vh"
       
 
 
@@ -140,6 +140,12 @@ export default function About() {
                     <p className="globeFacts">Europe: 3/50</p>
                     <p className="globeFacts">Asia: 1/48</p>
                     <p className="globeFacts">Australia: 1/1</p>
+                    <p className="globeCardSubTitle">Rotational Dynamics</p>
+                    <p className="globeFacts">lengthOfDayHrs: 24.00</p>
+                    <p className="globeFacts">obliquityToOrbitDeg: 23.44</p>
+                    <p className="globeFacts">inclinationOfEquatorDeg: 23.44</p>
+                
+
 
 
                   </div>

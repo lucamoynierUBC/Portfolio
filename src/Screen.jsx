@@ -129,6 +129,7 @@ export default function Screen() {
             <div className="crt">
                 <NavBar></NavBar>
                 <div className="content">
+                <MiniGame></MiniGame>
                 {/* <h1 className="header">Luca Moynier</h1>
                 <p onClick={() => setSelection('experience')} className={`text ${selection === 'experience' ? 'highlighted' : ''}`}>
                     Experience

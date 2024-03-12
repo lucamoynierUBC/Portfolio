@@ -13,6 +13,7 @@ import Screen from "./Screen";
 import { Route } from "wouter";
 import Projects from "./Projects";
 import About from "./About";
+import Contact from "./Contact";
 
 export default function CRTv(props) {
   const { nodes, materials } = useGLTF("/crt_tv.glb");
@@ -62,6 +63,7 @@ export default function CRTv(props) {
               <Route path="/" component={Screen}></Route>
               <Route path="/projects" component={Projects}></Route>
               <Route path="/about" component={About}></Route>
+              <Route path="/contact" component={Contact}></Route>
             </mesh>
             <mesh
               castShadow

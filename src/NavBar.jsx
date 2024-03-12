@@ -12,6 +12,8 @@ export default function NavBar() {
             case '/about':
                 return 'About';
             // Add more cases as needed
+            case '/contact':
+                return 'Contact'
             default:
                 return 'Home';
         }
@@ -57,7 +59,7 @@ export default function NavBar() {
                         About
                     </button>
                 </Link>
-                <Link href="/" onClick={() => handleButtonClick("Contact" , "/")}>
+                <Link href="/contact" onClick={() => handleButtonClick("Contact" , "/contact")}>
                     <button 
                         style={getButtonStyle("Contact")}
                         className="NavBtn NavBtn-shadow-drop NavBtn-shadow-drop--black"

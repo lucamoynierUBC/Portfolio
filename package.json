@@ -25,6 +25,7 @@
     "three": "^0.158.0",
     "three-globe": "^2.30.3",
     "vercel": "^33.0.2",
+    "vite-plugin-glsl": "^1.2.1",
     "wouter": "^2.12.1"
   }
 }

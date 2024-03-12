@@ -202,19 +202,14 @@ body,
   z-index: 100;
 }
 
+
 .content
 {
   overflow: scroll;
   overflow-x: hidden;
   height: 48vh;
 }
-  @media only screen and (max-width: 600px) {
-    .crt {
-      height: 39vh;
-      width: 50vh;
-      overflow: scroll;
-    }
-  }
+  
 
 .content-about
 {
@@ -224,10 +219,15 @@ body,
 }
   @media only screen and (max-width: 600px) {
     .crt {
-      height: 39vh;
+      height: 35vh;
       width: 52vh;
-      overflow: scroll;
+      /* overflow: scroll; */
     }
+    .content-about
+    {
+      height: 40vh;
+    }
+    
   }
 
   
@@ -401,6 +401,7 @@ body,
   margin: -20px;
   color: yellow;
   text-decoration: underline;
+  font-size: 1.5vh;
 }
 
 .NavBar
@@ -455,15 +456,18 @@ body,
 
 .globeCard {
   color: white;
-  width: 180px;
+  width: fit-content;
+  border: 2px solid rgba(194, 194, 194, 0.555);
 
   background-color: rgba(51, 52, 59, 0.5);
-  border-radius: 4px;
+  border-radius: 2px;
   padding-left: 2px;
   font-family: 'Space Mono', monospace;
   padding-left: 5px;
   margin-left: 10px;
   padding-bottom: 5px;
+  padding-right: 1vh;
+  white-space: nowrap;
 
 
 }
@@ -488,5 +492,28 @@ body,
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: x-small;
+}
+
+.contact-card{
+  color: #d6e4ff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+  font-size: small;
+  margin-top: 3vh;
+}
+
+.contact-method {
+  font-weight: 400;
+  
+}
+.contact-title{
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.contact-link {
+  color: #8c8c8c;
+  text-decoration: underline;
 }
  
