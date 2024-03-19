@@ -125,7 +125,7 @@ export default function Screen() {
     
     
     return (
-        <Html zIndexRange={[100,0]} position={[-0.05,.039,0.415]} distanceFactor={0.8}>
+        <Html zIndexRange={[1001,0]}  position={[-0.05,.039,0.415]} distanceFactor={0.8}>
             <div className="crt">
                 <NavBar></NavBar>
                 <div className="content">

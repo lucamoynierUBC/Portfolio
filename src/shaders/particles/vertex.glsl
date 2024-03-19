@@ -22,7 +22,7 @@ void main()
 
     displacement = normalize(displacement);
     displacement *= displacementIntentsity;
-    displacement *= 2.0;
+    displacement *= 1.0;
     displacement *= aIntensity;
     newPosition += displacement;
 

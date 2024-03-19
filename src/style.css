@@ -220,12 +220,13 @@ body,
   @media only screen and (max-width: 600px) {
     .crt {
       height: 35vh;
-      width: 52vh;
+      width: 58vh;
       /* overflow: scroll; */
     }
     .content-about
     {
-      height: 40vh;
+      height: 44vh;
+      /* width: 58vh; */
     }
     
   }

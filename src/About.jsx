@@ -46,7 +46,7 @@ export default function About() {
 
                 <Layout style={{marginTop: "1vh"}}>
                     <Sider style={{backgroundColor: "#290133"}} width={40}>
-                        <div class="stacked-text">
+                        <div className="stacked-text">
                             <span>M</span>
                             <span>Y</span>
                             <br></br>
@@ -151,7 +151,7 @@ export default function About() {
                   </div>
                     <Suspense fallback={<div style={{width: "100%", display: "flex", justifyContent: "center", }}><Spin size="large"></Spin></div>}>
                 
-                        <Canvas style={{width: "100%", height: "400px", left: "0%"}}>
+                        <Canvas style={{width: "100%", height: "35vh", left: "0%"}}>
                             {/* <Html className="globeTitle" occlude center position={[0,2.75,0]}>Countries I have visited</Html> */}
                             <OrbitControls enableZoom={false} enablePan={false}></OrbitControls>
                             <ambientLight position={[0,25,0]} intensity={5}></ambientLight>

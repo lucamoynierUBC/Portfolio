@@ -6,6 +6,7 @@ import { ConfigProvider } from 'antd'
 import { Analytics } from '@vercel/analytics/react';
 import { Suspense } from 'react'
 import { Loader } from '@react-three/drei'
+import MiniGame from './MiniGame'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -24,11 +25,11 @@ root.render(
             <Suspense fallback={null}>
                 
 
-                
                 <Experience/>
                 <Analytics />
         </Suspense>
         </Canvas>
+     
         <Loader/>
         </ConfigProvider>
     </>
